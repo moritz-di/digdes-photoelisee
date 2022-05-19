@@ -10,6 +10,9 @@ const artwork =[
       'https://my.spline.design/sunglasses-571e48d8ce3089b0ebe7d54f16176541/',
       'https://my.spline.design/balls-67798941912082a842263cc552478249/'
     ],
+    target: [
+      [40, 50, 10]
+    ],
     text: [
       'Try to find the bag in the image',
       'What about this one?',
