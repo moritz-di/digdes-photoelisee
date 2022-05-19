@@ -3,6 +3,7 @@ a{
   text-decoration: none;
   color: var(--color-dark);
 }
+
 .btn{
   padding: 8px 35px;
   background: var(--color-dark);
@@ -10,6 +11,25 @@ a{
   border-radius: 50px;
 }
 
+.btn-icon{
+  height: 75px;
+  width: 75px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: var(--color-light);
+  border: var(--border);
+  border-radius: 25px;
+}
+
+.btn-icon object{
+  height: 50px;
+  width: 50px;
+}
+
+.btn-hint>object path{
+  stroke-width: 3!important;
+}
 
 /* fonts */
 h1{

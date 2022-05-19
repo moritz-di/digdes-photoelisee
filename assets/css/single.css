@@ -25,12 +25,24 @@ main{
   flex-direction: column;
   padding: 40px;
   box-sizing: border-box;
+  justify-content: space-between;
+}
+
+.wrapper-side>.slide.inactive{
+  display: none;
 }
 
 .wrapper-side .info{
   text-align: center;
 }
 
+.wrapper-side .wrapper-hint{
+  display: flex;
+  width: 100%;
+  justify-content: space-between;
+}
+
+/* image */
 .wrapper-photo{
   display: flex;
   height: 100%;
@@ -44,6 +56,7 @@ main{
   border-radius: var(--radius);
 }
 
+/* credits */
 .credits{
   display: flex;
   width: 100%;
