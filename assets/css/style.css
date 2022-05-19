@@ -47,6 +47,7 @@ header{
 /* main */
 main{
   background: var(--color-dark);
+  /* height - padding-top - header - header margin-bottom - padding-bottom */
   height: calc(100vh - 35px - 75px - 40px - 40px);
 }
 
