@@ -1,22 +1,73 @@
 $(document).ready(function(){
-  // images
 
-  // detect slides
-  var slideCount = 0;
-  $('.slide').each(function(){
-    slideCount++;
-  });
-  console.log(slideCount);
+// all artworks
+const artwork =[
+  {
+    credits: '© Elisa Lavergo, Projet "In the field", 2014',
+    image: 'MEL_LARVEGO_050475.jpg',
+    models: [
+      'https://my.spline.design/backpack-fc152d6dfc940bd47a51d592725b9f04/',
+      'https://my.spline.design/sunglasses-571e48d8ce3089b0ebe7d54f16176541/',
+      'https://my.spline.design/balls-67798941912082a842263cc552478249/'
+    ],
+    text: [
+      'Try to find the bag in the image',
+      'What about this one?',
+      'Nice, how about these balls? ;)'
+    ]
+  },
+  {
+    credits: '© Elisa Lavergo, Projet "In the field", 2014',
+    image: 'MEL_LARVEGO_050475.jpg',
+    models: [
+      'https://my.spline.design/backpack-fc152d6dfc940bd47a51d592725b9f04/',
+      'https://my.spline.design/sunglasses-571e48d8ce3089b0ebe7d54f16176541/',
+      'https://my.spline.design/balls-67798941912082a842263cc552478249/'
+    ],
+    text: [
+      'Try to find the bag in the image',
+      'What about this one?',
+      'Nice, how about these balls? ;)'
+    ]
+  }
+];
 
-  // hide all the slides but the first one
-  $('.wrapper-side>.slide:not(:nth-child(1))').addClass('inactive');
+const queryString = window.location.search
+const urlParams = new URLSearchParams(queryString)
+const page_id = urlParams.get('id')
+const page_model = urlParams.get('model')
 
-  currentSlide = 1;
-  // detect click on image and display next slide
-  $('.wrapper-photo>img').click(function(){
-    currentSlide++;
-    $('.wrapper-side>.slide:not(:nth-child(1))').addClass('inactive');
-    $('.wrapper-side>.slide:not(:nth-child(1))').addClass('inactive');
-  });
+//console.log(artwork[0].text.entry)
 
+// image
+$('.wrapper-photo>img').attr('src', '../assets/artworks/' + artwork[page_id].image)
+// model
+$('.model>iframe').attr('src', artwork[page_id].models[page_model])
+// text
+$('.info>p').text(artwork[page_id].text[page_model])
+// credits
+$('.credits>span').text(artwork[page_id].credits)
+
+var gotoId = page_id
+var gotoModel = page_model
+
+$('.wrapper-photo>img').click(function(){
+  gotoModel++ 
+  window.location.href = "/pages/artwork.html?id=" + gotoId + "&model=" + gotoModel
 })
+
+
+});
+
+
+
+
+
+
+
+
+
+
+// artwork.forEach((artwork, index)=>{
+//   console.log(artwork.image);
+// });
