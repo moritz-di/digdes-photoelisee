@@ -4,6 +4,10 @@ main{
   height: calc(100vh - 35px - 75px - 40px - 25px - 40px);
 }
 
+.wrapper-inner{
+  justify-content: flex-start;
+}
+
 .wrapper-side{
   width: 35%;
   height: calc(100% + 4px);
