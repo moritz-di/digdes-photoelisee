@@ -3,33 +3,32 @@ main{
   /* height - padding-top - header - header margin-bottom - credits - padding-bottom */
   height: calc(100vh - 35px - 75px - 40px - 25px - 40px);
 }
+
 .wrapper-side{
   width: 35%;
-  height: 100%;
+  height: calc(100% + 4px);
   border: var(--border);
   border-radius: var(--radius);
-  margin-left: -3px;
+  margin: -2px 0 -2px -2px;
   background-color: var(--color-light);
+  display: flex;
+  flex-direction: column;
+  padding: 40px;
+  box-sizing: border-box;
+  justify-content: space-between;
+  align-items: flex-start;
+  position: relative;
+}
+
+.wrapper-side>.back{
+  position: absolute;
+  z-index: 2;
 }
 
 .wrapper-side .model{
   height: 50%;
   width: 100%;
   position: relative;
-}
-
-.wrapper-side>.slide{
-  height: 100%;
-  width: 100%;
-  display: flex;
-  flex-direction: column;
-  padding: 40px;
-  box-sizing: border-box;
-  justify-content: space-between;
-}
-
-.wrapper-side>.slide.inactive{
-  display: none;
 }
 
 .wrapper-side .info{
@@ -39,14 +38,21 @@ main{
 .wrapper-side .wrapper-hint{
   display: flex;
   width: 100%;
-  justify-content: space-between;
+  justify-content: center;
 }
 
 /* image */
 .wrapper-photo{
   display: flex;
-  height: 100%;
-  width: 65%;
+  max-height: 100%;
+  max-width: 65%;
+  position: relative;
+}
+
+.wrapper-photo>.target{
+  position: absolute;
+  border-radius: 500px;
+  border: var(--border);
 }
 
 .wrapper-photo>img{
@@ -54,6 +60,7 @@ main{
   height: 100%;
   width: 100%;
   border-radius: var(--radius);
+  max-height: calc(100vh - 35px - 75px - 40px - 25px - 40px - 4px);
 }
 
 /* credits */
