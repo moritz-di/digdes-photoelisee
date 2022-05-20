@@ -70,13 +70,16 @@ var gotoModel = page_model
 console.log(artwork[page_id].models.length)
 console.log(gotoModel)
 
+// console.log($('.wrapper-models>iframe').attr('data-id'))
+
+
 // switch to the next model
 $('.wrapper-photo>.target').click(function(){
   // set up the model count
   gotoModel++
   // redirect to the success-page if all the objects were found
   if(gotoModel == artwork[page_id].models.length){
-    window.location.href = '/'
+    window.location.href = '/pages/success.html'
   } else{ // or display the next object
     window.location.href = '/pages/artwork.html?id=' + gotoId + '&model=' + gotoModel + '&hint=0'
   }
