@@ -87,13 +87,17 @@ $('.wrapper-photo>.target').click(function(){
 
 
 // show the correct button (hint/help)
-if(page_hint == 1){
-  $('.btn.hint').addClass('hidden')
-  $('.btn.help').removeClass('hidden')
-} else{
-  $('.btn.help').addClass('hidden')
-  $('.btn.hint').removeClass('hidden')
-}
+$('.wrapper-hint>.btn').click(function(){
+  console.log('btn')
+  //console.log(page_hint)
+  if(page_hint == 1){
+    $('.btn.hint').addClass('hidden')
+    $('.btn.help').removeClass('hidden')
+  } else{
+    $('.btn.help').addClass('hidden')
+    $('.btn.hint').removeClass('hidden')
+  }
+});
 
 });
 
