@@ -4,10 +4,6 @@ main{
   height: calc(100vh - 35px - 75px - 40px - 25px - 40px);
 }
 
-.wrapper-inner{
-  justify-content: flex-start;
-}
-
 .wrapper-side{
   width: 35%;
   height: calc(100% + 4px);
@@ -21,12 +17,13 @@ main{
   box-sizing: border-box;
   justify-content: space-between;
   align-items: flex-start;
+  flex-grow: 1;
   position: relative;
 }
 
 .wrapper-side>.back{
   position: absolute;
-  z-index: 2;
+  z-index: 3;
 }
 
 .wrapper-side .model{
@@ -43,6 +40,24 @@ main{
   display: flex;
   width: 100%;
   justify-content: center;
+}
+
+.overlay-help{
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  background: var(--color-light);
+  border-radius: var(--radius);
+  top: 0;
+  left: 0;
+  z-index: 2;
+  padding: 100px 40px 40px 40px;
+  box-sizing: border-box;
+  display: none;
+}
+
+.overlay-help.active{
+  display: flex;
 }
 
 /* image */
