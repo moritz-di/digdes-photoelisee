@@ -27,8 +27,10 @@ main{
 }
 
 .wrapper-side .model{
-  height: 50%;
-  width: 100%;
+  height: calc(50% + 40px);
+  width: calc(100% + 80px);
+  margin-left: -40px;
+  margin-top: -40px;
   position: relative;
 }
 
