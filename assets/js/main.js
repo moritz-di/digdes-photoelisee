@@ -104,6 +104,25 @@ $('.btn.back').click(function(){
   }
 })
 
+
+// ============================================
+//                    panzoom
+// ============================================
+
+
+const elem = document.getElementById('panzoom-element')
+const panzoom = Panzoom(elem, {
+  maxScale: 10
+})
+panzoom.pan(20, 20)
+panzoom.zoom(1, { animate: true })
+
+// Panning and pinch zooming are bound automatically (unless disablePan is true).
+// There are several available methods for zooming
+// that can be bound on button clicks or mousewheel.
+// button.addEventListener('click', panzoom.zoomIn)
+elem.addEventListener('wheel', panzoom.zoomWithWheel)
+
 }); // ready :)
 
 
