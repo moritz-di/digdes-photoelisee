@@ -8,10 +8,10 @@ console.log('main.js -> ready')
 
 
 // load the first object of each image to the iframe
-$('.wrapper-models>a>iframe').each(function(){
-  var thisid = $(this).attr('data-id')
-  $(this).attr('src', artwork[thisid].models[0])
-})
+// $('.wrapper-models>a>iframe').each(function(){
+//   var thisid = $(this).attr('data-id')
+//   $(this).attr('src', artwork[thisid].models[0])
+// })
 
 
 // ============================================
@@ -75,6 +75,7 @@ $('.wrapper-hint>.btn').click(function(){
     $('.btn.help').toggleClass('hidden')
     hint = 1
     console.log('hint displayed')
+    $('.wrapper-photo').toggleClass('hint')
 // if the hint is already displayed, show the help page
   } else if (hint == 1){
     $('.btn.hint').toggleClass('hidden')
@@ -82,6 +83,7 @@ $('.wrapper-hint>.btn').click(function(){
     console.log('help displayed')
     $('.overlay-help').toggleClass('active')
     hint = 2;
+    $('.wrapper-photo').toggleClass('hint')
   }
 });
 
@@ -90,6 +92,7 @@ $('.btn.back').click(function(){
 // close help if open
   if(hint == 2){
     $('.overlay-help').toggleClass('active')
+    $('.wrapper-photo').removeClass('hint')
     hint = 0
 
 // goto prev model
@@ -104,6 +107,35 @@ $('.btn.back').click(function(){
   }
 })
 
+// ============================================
+//                success links
+// ============================================
+
+$('.wrapper-models>iframe').contents().click(function(){
+  console.log('click detected')
+  var linkTo = $(this).attr('data-link')
+  console.log(linkTo)
+})
+
+$("iframe").on("load", function(){
+  $(this).contents().on("mousedown, mouseup, click", function(){
+      alert("Click detected inside iframe.");
+  });
+});
+
+
+// ============================================
+//                    cursor
+// ============================================
+
+var cursor = $('#cursor');
+
+$(window).mousemove(function(e) {
+    cursor.css({
+        top: e.clientY - cursor.height() / 2,
+        left: e.clientX - cursor.width() / 2
+    });
+});
 
 // ============================================
 //                    panzoom

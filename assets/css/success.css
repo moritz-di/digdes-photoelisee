@@ -1,3 +1,15 @@
 .wrapper-models{
   display: flex;
+  margin: 5vh 0;
+}
+
+.wrapper-models iframe{
+  height: 300px;
+  width: 300px;
+  border-radius: var(--radius);
+  overflow: hidden;
+}
+
+.wrapper-models iframe:nth-child(2){
+  margin: 0 40px;
 }

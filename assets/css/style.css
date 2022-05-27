@@ -72,6 +72,18 @@ header{
   width: 40vw;
 }
 
+/* cursor */
+#cursor{
+  height: 20px;
+  width: 20px;
+  background: var(--color-dark);
+  position: fixed;
+  pointer-events: none;
+  /* mix-blend-mode: difference; */
+  z-index: 5;
+  border-radius: 50%;
+}
+
 /* main */
 main{
   background: var(--color-dark);
