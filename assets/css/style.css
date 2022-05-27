@@ -84,6 +84,23 @@ header{
   border-radius: 50%;
 }
 
+/* iframe logo overlay */
+
+.wrapper-models>div{
+  position: relative;
+}
+
+.wrapper-models>div::after{
+  content: '';
+  height: 15px;
+  width: 15px;
+  position: absolute;
+  right: 6px;
+  bottom: 6px;
+  background: var(--color-light);
+  border-radius: 50%;
+}
+
 /* main */
 main{
   background: var(--color-dark);
@@ -127,5 +144,5 @@ main{
   height: 500px;
   width: 500px;
   transform: scale(.4);
-  transform-origin: top;
+  transform-origin: left top;
 }

@@ -1,6 +1,10 @@
 .wrapper-models{
   display: flex;
-  margin: 5vh 0;
+  margin: 0 0 5vh 0;
+}
+
+.wrapper-models>div{
+  margin: 0;
 }
 
 .wrapper-models iframe{
