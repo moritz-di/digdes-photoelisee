@@ -86,11 +86,13 @@ header{
 
 /* iframe logo overlay */
 
-.wrapper-models>div{
+.wrapper-models>div,
+.wrapper-side>.model{
   position: relative;
 }
 
-.wrapper-models>div::after{
+.wrapper-models>div::after,
+.wrapper-side>.model::after{
   content: '';
   height: 15px;
   width: 15px;
@@ -99,6 +101,13 @@ header{
   bottom: 6px;
   background: var(--color-light);
   border-radius: 50%;
+}
+
+.wrapper-side>.model::after{
+  height: 40px;
+  width: 40px;
+  right: 11px;
+  bottom: 11px;
 }
 
 /* main */
