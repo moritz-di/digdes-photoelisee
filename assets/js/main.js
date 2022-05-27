@@ -24,7 +24,7 @@ gsap.to(".home .wrapper-models.first-row", {x: -800, scrollTrigger: {
       trigger: "body",
       start: "top top",
       end: "+=500",
-      markers: true,
+      //markers: true,
       scrub: .5,
       pin: true
 }});
@@ -34,7 +34,7 @@ gsap.to(".home .wrapper-models.second-row", {x: 600, scrollTrigger: {
       trigger: "body",
       start: "top top",
       end: "+=500",
-      markers: true,
+      //markers: true,
       scrub: .5,
       pin: true
 }});
