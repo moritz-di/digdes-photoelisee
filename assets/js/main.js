@@ -1,3 +1,5 @@
+gsap.registerPlugin(ScrollTrigger);
+
 $(document).ready(function(){
 
 console.log('main.js -> ready')
@@ -9,11 +11,33 @@ console.log('main.js -> ready')
 
 // load the first object of each image to the iframe
 $('.home .wrapper-models>div>iframe').each(function(){
-  var thisId = $(this).attr('data-id')
+  var thisId = $(this).parents('div').attr('data-id')
   console.log(thisId)
   var thisLink = artwork[thisId].models[0];
   $(this).attr('src', thisLink)
 });
+
+
+// home scrolling through the elements
+gsap.set(".home .wrapper-models.first-row", {x: 400}),
+gsap.to(".home .wrapper-models.first-row", {x: -800, scrollTrigger: {
+      trigger: "body",
+      start: "top top",
+      end: "+=500",
+      markers: true,
+      scrub: .5,
+      pin: true
+}});
+
+gsap.set(".home .wrapper-models.second-row", {x: -800}),
+gsap.to(".home .wrapper-models.second-row", {x: 600, scrollTrigger: {
+      trigger: "body",
+      start: "top top",
+      end: "+=500",
+      markers: true,
+      scrub: .5,
+      pin: true
+}});
 
 
 // ============================================

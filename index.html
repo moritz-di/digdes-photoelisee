@@ -22,69 +22,71 @@
   </header>
   <main class="home">
     <div class="wrapper-inner">
-      <div class="wrapper-models row">
+      <div class="wrapper-models first-row">
         <div  data-id='0'>
-          <iframe data-id='0' src='' frameborder='0' width='100%' height='100%'></iframe>  
+          <iframe src='' frameborder='0' width='100%' height='100%'></iframe>  
         </div>
         <div data-id='1'>
-          <iframe data-id='1' src='' frameborder='0' width='100%' height='100%'></iframe>  
+          <iframe src='' frameborder='0' width='100%' height='100%'></iframe>  
         </div>
         <div data-id='2'>
-          <iframe data-id='2' src='' frameborder='0' width='100%' height='100%'></iframe>  
+          <iframe src='' frameborder='0' width='100%' height='100%'></iframe>  
         </div>
         <div data-id='3'>
-          <iframe data-id='3' src='' frameborder='0' width='100%' height='100%'></iframe>  
+          <iframe src='' frameborder='0' width='100%' height='100%'></iframe>  
         </div>
         <div data-id='4'>
-          <iframe data-id='4' src='' frameborder='0' width='100%' height='100%'></iframe>  
+          <iframe src='' frameborder='0' width='100%' height='100%'></iframe>  
         </div>
         <div data-id='5'>
-          <iframe data-id='5' src='' frameborder='0' width='100%' height='100%'></iframe>  
+          <iframe src='' frameborder='0' width='100%' height='100%'></iframe>  
         </div>
         <div data-id='6'>
-          <iframe data-id='6' src='' frameborder='0' width='100%' height='100%'></iframe>  
+          <iframe src='' frameborder='0' width='100%' height='100%'></iframe>  
         </div>
       </div>
       <div class="title-wrapper">
         <h1>look beyond</h1>
         <p>drag to explore the models, click on them to reveal the photo</p>
       </div>
-      <div class="wrapper-models row">
-        <div>
-          <iframe data-id='7' src='' frameborder='0' width='100%' height='100%'></iframe>  
+      <div class="wrapper-models second-row">
+        <div data-id='7'>
+          <iframe src='' frameborder='0' width='100%' height='100%'></iframe>  
         </div>
-        <div>
-          <iframe data-id='8' src='' frameborder='0' width='100%' height='100%'></iframe>  
+        <div data-id='8'>
+          <iframe src='' frameborder='0' width='100%' height='100%'></iframe>  
         </div>
-        <div>
-          <iframe data-id='9' src='' frameborder='0' width='100%' height='100%'></iframe>  
+        <div data-id='9'>
+          <iframe src='' frameborder='0' width='100%' height='100%'></iframe>  
         </div>
-        <div>
-          <iframe data-id='10' src='' frameborder='0' width='100%' height='100%'></iframe>  
+        <div data-id='10'>
+          <iframe src='' frameborder='0' width='100%' height='100%'></iframe>  
         </div>
-        <div>
-          <iframe data-id='11' src='' frameborder='0' width='100%' height='100%'></iframe>  
+        <div data-id='11'>
+          <iframe src='' frameborder='0' width='100%' height='100%'></iframe>  
         </div>
-        <div>
-          <iframe data-id='12' src='' frameborder='0' width='100%' height='100%'></iframe>  
+        <div data-id='12'>
+          <iframe src='' frameborder='0' width='100%' height='100%'></iframe>  
         </div>
-        <div>
-          <iframe data-id='13' src='' frameborder='0' width='100%' height='100%'></iframe>  
+        <div data-id='13'>
+          <iframe src='' frameborder='0' width='100%' height='100%'></iframe>  
         </div>
-        <div>
-          <iframe data-id='14' src='' frameborder='0' width='100%' height='100%'></iframe>  
+        <div data-id='14'>
+          <iframe src='' frameborder='0' width='100%' height='100%'></iframe>  
         </div>
       </div>
     </div>
   </main>
   <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.9.1/gsap.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.9.1/ScrollTrigger.min.js"></script>
   <script src="/assets/js/jquery.iframetracker.js"></script>
   <script src="/assets/js/artworks.js"></script>
   <script src="/assets/js/main.js"></script>
 
   <!-- detect iframe clicks -->
   <script>
-    
+
     $('.home iframe').iframeTracker({
       blurCallback: function(){
         console.log('clicked')
