@@ -13,7 +13,7 @@ $('.home .wrapper-models>div>iframe').each(function(){
   console.log(thisId)
   var thisLink = artwork[thisId].models[0];
   $(this).attr('src', thisLink)
-})
+});
 
 
 // ============================================
