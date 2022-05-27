@@ -110,16 +110,22 @@ main{
 /* home */
 .title-wrapper{
   text-align: center;
+  margin: 5vh 0;
 }
 
-.model{
+.wrapper-models{
+  display: flex;
+}
+
+.wrapper-models>div{
+  height: 200px;
+  width: 200px;
+  margin: 0 5vw;
+}
+
+.wrapper-models>div>iframe{
   height: 500px;
   width: 500px;
-  position: absolute;
+  transform: scale(.4);
+  transform-origin: top;
 }
-
-.model-01{
-  left: 0;
-  top: 0;
-}
-

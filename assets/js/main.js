@@ -8,10 +8,12 @@ console.log('main.js -> ready')
 
 
 // load the first object of each image to the iframe
-// $('.wrapper-models>a>iframe').each(function(){
-//   var thisid = $(this).attr('data-id')
-//   $(this).attr('src', artwork[thisid].models[0])
-// })
+$('.home .wrapper-models>div>iframe').each(function(){
+  var thisId = $(this).attr('data-id')
+  console.log(thisId)
+  var thisLink = artwork[thisId].models[0];
+  $(this).attr('src', thisLink)
+})
 
 
 // ============================================
@@ -111,17 +113,17 @@ $('.btn.back').click(function(){
 //                success links
 // ============================================
 
-$('.wrapper-models>iframe').contents().click(function(){
-  console.log('click detected')
-  var linkTo = $(this).attr('data-link')
-  console.log(linkTo)
-})
+// $('.wrapper-models>div').click(function(){
+//   console.log('click detected')
+//   var linkTo = $(this).attr('data-link')
+//   console.log(linkTo)
+// })
 
-$("iframe").on("load", function(){
-  $(this).contents().on("mousedown, mouseup, click", function(){
-      alert("Click detected inside iframe.");
-  });
-});
+// $("iframe").on("load", function(){
+//   $(this).contents().on("mousedown, mouseup, click", function(){
+//       alert("Click detected inside iframe.");
+//   });
+// });
 
 
 // ============================================

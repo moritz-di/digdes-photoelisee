@@ -29,18 +29,30 @@
         <p>select a new object to explore the image beyond</p>
       </div>
       <div class="wrapper-models">
-          <iframe data-link="/pages/artwork.html?id=6&model=0" src='https://my.spline.design/clock-8efb856751d08e4c8788d9837ba775fe/' frameborder='0' width='100%' height='100%'></iframe>
-        <a href="/pages/artwork.html?id=1&model=0">
-          <iframe src='https://my.spline.design/christmas-370fd687501d79686a91c7c3b1f73c5a/' frameborder='0' width='100%' height='100%'></iframe>
-        </a>
-        <a href="/pages/artwork.html?id=0&model=0">
-          <iframe src='https://my.spline.design/backpack-fc152d6dfc940bd47a51d592725b9f04/' frameborder='0' width='100%' height='100%'></iframe>
-        </a>
+        <iframe data-test='/pages/artwork.html?id=6&model=0' src='https://my.spline.design/clock-8efb856751d08e4c8788d9837ba775fe/' frameborder='0' width='100%' height='100%'></iframe>
+        <iframe data-link='/pages/artwork.html?id=1&model=0' src='https://my.spline.design/christmas-370fd687501d79686a91c7c3b1f73c5a/' frameborder='0' width='100%' height='100%'></iframe>
+        <iframe data-link='/pages/artwork.html?id=0&model=0' src='https://my.spline.design/backpack-fc152d6dfc940bd47a51d592725b9f04/' frameborder='0' width='100%' height='100%'></iframe>
     </div>
       <a href="/" class="btn">back to all the objects</a>
     </div>
   </main>
   <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
-  <script src="/assets/js/main.js"></script>
+  <script>
+    // var linkTo = 'link'
+    // var detector = setInterval(function() {
+    //     var elem = document.activeElement;
+    //     if (elem && elem.tagName == 'IFRAME') 
+    //     {
+    //       linkTo = document.activeElement.attr('data-test')
+    //       console.log("Click detected inside iframe." + linkTo);
+    //       clearInterval(detector);
+    //     }
+    //   }, 100);
+
+    // $('iframe').click(function(){
+    //   console.log('clicked')
+    // })
+
+  </script>
 </body>
 </html>
