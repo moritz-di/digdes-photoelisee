@@ -78,6 +78,10 @@ main{
   position: relative;
 }
 
+.wrapper-photo>.inner{
+  display: flex;
+}
+
 .wrapper-photo.hint{
   position: relative;
 }
@@ -92,7 +96,7 @@ main{
   opacity: .3;
 }
 
-.wrapper-photo>.target{
+.wrapper-photo>.inner>.target{
   position: absolute;
   border-radius: 500px;
   /*border: var(--border);*/
@@ -101,7 +105,7 @@ main{
   align-items: center;
 }
 
-.wrapper-photo.hint>.target::after{
+.wrapper-photo.hint>.inner>.target::after{
   content: "";
   background: white;
   z-index: 2;

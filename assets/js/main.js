@@ -52,7 +52,7 @@ const page_id = urlParams.get('id')
 const page_model = urlParams.get('model')
 
 // load image
-$('.wrapper-photo>img').attr('src', '../assets/artworks/' + artwork[page_id].image)
+$('.wrapper-photo>div>img').attr('src', '../assets/artworks/' + artwork[page_id].image)
 
 // load & display the targets
 let targets = artwork[page_id].target[page_model]
