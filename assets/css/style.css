@@ -25,7 +25,7 @@ a{
   justify-content: center;
 }
 
-.btn.icon>object{
+.btn.icon>img{
   height: 35px;
   width: auto;
 }
@@ -69,19 +69,48 @@ header{
   display: flex;
   justify-content: space-between;
   align-items: center;
-  width: 40vw;
+  width: 35vw;
 }
 
 /* cursor */
 #cursor{
   height: 20px;
   width: 20px;
-  background: var(--color-dark);
+  background: transparent;
+  border: 2px solid var(--color-dark);
+  margin: -1px 0 0 -1px;
   position: fixed;
   pointer-events: none;
   /* mix-blend-mode: difference; */
   z-index: 5;
   border-radius: 50%;
+  transition: .5s background;
+  opacity: 1;
+}
+
+#cursor.inactive{
+  opacity: 0;
+}
+
+#cursor.false{
+  background: red;
+  border-color: red;
+  animation: wiggle .2s ease-in-out 5;
+}
+
+@keyframes wiggle {
+  0%{
+    transform: translate(0, 0);
+  }
+  33% {
+    transform: translate(5px, 0);
+  }
+  66% {
+    transform: translate(-5px, 0);
+  }
+  100% {
+    transform: translate(0, 0);
+  }
 }
 
 /* iframe logo overlay */
@@ -154,4 +183,40 @@ main{
   width: 500px;
   transform: scale(.4);
   transform-origin: left top;
+}
+
+.res-overlay{
+  display: none;
+  position: fixed;
+  height: 100vh;
+  width: 100vw;
+  top: 0;
+  left: 0;
+  justify-content: center;
+  align-items: center;
+  padding: 40px;
+  background: var(--color-dark);
+  z-index: 88;
+}
+
+.res-overlay::after{
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  border: var(--border);
+  border-radius: var(--radius);
+  background: var(--color-light);
+  height: calc(100vh - 4px);
+  width: calc(100vw - 4px);
+}
+
+.res-overlay>span{
+  z-index: 99;
+}
+
+@media only screen and (max-width: 1200px){
+  .res-overlay{
+    display: flex;
+  }
 }

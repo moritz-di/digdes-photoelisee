@@ -57,9 +57,9 @@ $('.wrapper-photo>div>img').attr('src', '../assets/artworks/' + artwork[page_id]
 // load & display the targets
 let targets = artwork[page_id].target[page_model]
 targets.forEach((element,index) => {
-  $('.wrapper-photo').append("<div class='target target-" + index + "'></div>")
+  $('.wrapper-photo>.inner').append("<div class='target target-" + index + "'></div>")
   console.log(index)
-    $('.wrapper-photo>.target-' + index).css({
+    $('.wrapper-photo>.inner>.target-' + index).css({
       'top' : element[0] + '%', 
       'left' : element[1] + '%',
       'height' : element[2] + 'px',
@@ -133,21 +133,6 @@ $('.btn.back').click(function(){
   }
 })
 
-// ============================================
-//                success links
-// ============================================
-
-// $('.wrapper-models>div').click(function(){
-//   console.log('click detected')
-//   var linkTo = $(this).attr('data-link')
-//   console.log(linkTo)
-// })
-
-// $("iframe").on("load", function(){
-//   $(this).contents().on("mousedown, mouseup, click", function(){
-//       alert("Click detected inside iframe.");
-//   });
-// });
 
 
 // ============================================
@@ -162,6 +147,25 @@ $(window).mousemove(function(e) {
         left: e.clientX - cursor.width() / 2
     });
 });
+
+$('div').click(function(){
+  if($(this).hasClass('inner')){
+    console.log('clicked')
+    cursor.addClass('false')
+    setTimeout(function() {
+      cursor.removeClass('false')
+    }, 1000);
+  }
+});
+
+
+$('iframe').mouseover(function(){
+  cursor.addClass('inactive')
+})
+
+$('iframe').mouseout(function(){
+  cursor.removeClass('inactive')
+})
 
 // ============================================
 //                    panzoom

@@ -139,7 +139,7 @@ const artwork =[
       ], // bench
     ],
     text: [
-      'Try to find the palm bin in the image',
+      'Try to find the palm in the image',
       'Try to find the bench in the image',
     ]
   },
@@ -163,7 +163,7 @@ const artwork =[
       ], // knife
     ],
     text: [
-      'Try to find the clock bin in the image',
+      'Try to find the clock in the image',
       'Try to find the knife in the image',
     ]
   },
