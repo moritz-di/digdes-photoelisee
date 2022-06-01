@@ -149,7 +149,7 @@ main{
 .wrapper-photo>.inner>.target{
   position: absolute;
   border-radius: 500px;
-  border: var(--border);
+  /* border: var(--border); */
   display: flex;
   justify-content: center;
   align-items: center;
@@ -189,4 +189,10 @@ main{
 
 .credits span{
   font-size: 0.6rem;
+}
+
+@media only screen and (min-width: 2200px){
+  .wrapper-photo>.inner>.target{
+    transform: translate(20%, 20%);
+  }
 }

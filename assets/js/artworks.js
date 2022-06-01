@@ -49,7 +49,10 @@ const artwork =[
     target: [
       [[27, 5, 400]], // bulb
       [[53, 38, 50]], // camera
-      [[50, 25, 50]], // frame
+      [
+        [50, 25, 50],
+        [50, 51, 50]
+      ], // frame
       [[55, 47, 50]], // roses
     ],
     text: [
@@ -69,10 +72,10 @@ const artwork =[
     // top, left, size
     target: [
       [
-        [76, 82, 30],
-        [45, 56, 30]
+        [77, 83, 30],
+        [46, 57, 30]
       ], // bag
-      [[45, 53, 30]], // phone
+      [[47, 53, 30]], // phone
     ],
     text: [
       'Try to find the bag in the image',
@@ -104,13 +107,13 @@ const artwork =[
     ],
     // top, left, size
     target: [
-      [[21, 0, 50]], // garbagebin
+      [[23, 0, 50]], // garbagebin
       [
-        [35, 0, 50],
-        [63, 4, 50]
+        [37, 1, 50],
+        [65, 5, 50]
       ], // cigarette
-      [[55, 74, 50]], // chain
-      [[17, 90, 50]], // umbrella
+      [[57, 75, 50]], // chain
+      [[19, 91, 50]], // umbrella
     ],
     text: [
       'Try to find the garbage bin in the image',
@@ -129,6 +132,7 @@ const artwork =[
     // top, left, size
     target: [
       [
+        [33, 60, 50],
         [32, 70, 50],
         [32, 82, 50]
       ], // palm
@@ -152,7 +156,10 @@ const artwork =[
     ],
     // top, left, size
     target: [
-      [[62, 19, 50]], // clock
+      [
+        [62, 19, 50],
+        [65, 22, 50]
+      ], // clock
       [
         [13, 22, 50],
         [13, 26, 50],
@@ -217,7 +224,7 @@ const artwork =[
     ],
     // top, left, size
     target: [
-      [[55, 14, 50]], // glass
+      [[54, 12, 80]], // glass
     ],
     text: [
       'Try to find the glass in the image',
@@ -359,10 +366,6 @@ const allModels = [
   [
     'https://my.spline.design/bottle-b90b36c246a768408baae3a384377c03/', // bottle
     12
-  ],
-  [
-    'https://my.spline.design/palm-f2073632d3a764e6aa3fa466335fa5a0/', // palm
-    13
   ],
   [
     'https://my.spline.design/heating-bc8b58feb1ce5f7d0793795d708c7bf1/', // heating

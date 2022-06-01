@@ -158,6 +158,18 @@ $(window).mousemove(function(e) {
     });
 });
 
+
+// var isDragging = false
+// $('div').mousedown(function() {
+//     $(window).mousemove(function() {
+//         isDragging = true;
+//         $(window).unbind("mousemove");
+//     });
+// }).mouseup(function() {
+//     isDragging = false;
+//     $(window).unbind("mousemove");
+// });
+
 $('div').click(function(){
   if($(this).hasClass('inner')){
     console.log('clicked')
