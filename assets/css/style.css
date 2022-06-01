@@ -83,7 +83,6 @@ header{
   width: 35vw;
 }
 
-
 /* iframe logo overlay */
 
 .wrapper-models>div,
@@ -156,6 +155,12 @@ main{
   transform-origin: left top;
 }
 
+/* about */
+main.about .title-wrapper{
+  padding: 40px;
+}
+
+.preloader,
 .res-overlay{
   display: none;
   position: fixed;
@@ -170,6 +175,12 @@ main{
   z-index: 88;
 }
 
+.preloader{
+  display: flex;
+  z-index: 95;
+}
+
+.preloader::after,
 .res-overlay::after{
   content: "";
   position: absolute;
@@ -182,6 +193,7 @@ main{
   width: calc(100vw - 4px);
 }
 
+.preloader>div,
 .res-overlay>span{
   z-index: 99;
 }

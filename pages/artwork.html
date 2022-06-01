@@ -13,12 +13,17 @@
 </head>
 <body class="single">
   <header>
-    <a href="/"><img class="logo" src="../assets/look-beyond.svg" alt="logo"></a>
+    <a href="/"><img class="logo" src="../assets/logo.png" alt="logo"></a>
     <div class="nav">
       <a href="/pages/about.html">about the project</a>
       <a href="https://elysee.ch/" target="_blank" class="btn">visit the exhibition</a>
     </div>
   </header>
+
+  <div class="preloader">
+    <div>loading</div>
+  </div>
+
   <main>
     <div class="wrapper-inner">
       <div class="wrapper-side">
@@ -49,6 +54,10 @@
             <img src="" alt="">
           </div>
         </div>
+        <div class="message info active">scroll, drag or pinch to navigate</div>
+        <div class="message false">oh no, that's false</div>
+        <div class="message correct">perfect, that's correct</div>
+
       </div>
     </div>
   </main>
@@ -57,10 +66,10 @@
   </div>
 
   <svg class="noise"
-  xmlns='http://www.w3.org/2000/svg'
-  xmlns:xlink='http://www.w3.org/1999/xlink'
-  width='100%' height='100%'>
-  <filter id='n' x='0' y='0'>
+    xmlns='http://www.w3.org/2000/svg'
+    xmlns:xlink='http://www.w3.org/1999/xlink'
+    width='100%' height='100%'>
+    <filter id='n' x='0' y='0'>
             <feTurbulence
               type='fractalNoise'
               baseFrequency='0.8'

@@ -45,17 +45,24 @@ body{
   z-index: 50;
   border-radius: 50%;
   transition: .5s background;
-  opacity: 1;
-}
-
-#cursor.inactive{
   opacity: 0;
 }
 
+#cursor.active{
+  opacity: 1;
+}
+
 #cursor.false{
-  background: red;
-  border-color: red;
+  background: #EB6042;
+  border-color: #EB6042;
   animation: wiggle .2s ease-in-out 5;
+}
+
+#cursor.correct{
+  background: #88E866;
+  border-color: #88E866;
+  transform: scale(1.5);
+  animation: none;
 }
 
 @keyframes wiggle {

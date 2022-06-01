@@ -1,8 +1,14 @@
-gsap.registerPlugin(ScrollTrigger);
-
 $(document).ready(function(){
 
 console.log('main.js -> ready')
+
+// ============================================
+//                  PRELOADER
+// ============================================
+
+$(window).on('load', function() {
+  $('.preloader').fadeOut('slow');
+});
 
 // ============================================
 //                    HOME
@@ -83,9 +89,13 @@ $('.wrapper-photo>.inner>.target').click(function(){
   gotoModel++
   // redirect to the success-page if all the objects were found
   if(gotoModel == artwork[page_id].models.length){
-    window.location.href = '/pages/success.html'
+    setTimeout(function() {
+      window.location.href = '/pages/success.html'
+    }, 2000);
   } else{ // or display the next object
-    window.location.href = '/pages/artwork.html?id=' + gotoId + '&model=' + gotoModel //+ '&hint=0'
+    setTimeout(function() {
+      window.location.href = '/pages/artwork.html?id=' + gotoId + '&model=' + gotoModel //+ '&hint=0'
+    }, 2000);
   }
 })
 
@@ -155,16 +165,33 @@ $('div').click(function(){
     setTimeout(function() {
       cursor.removeClass('false')
     }, 1000);
+
+    $('.message.info').removeClass('active');
+    $('.message.false').addClass('active');
+    setTimeout(function() {
+      $('.message.active').removeClass('active')
+    }, 3000);
+
+  } else if($(this).hasClass('target')){
+    cursor.addClass('correct')
+
+    $('.message.false').fadeOut();
+    $('.message.false').removeClass('active');
+    $('.message.correct').addClass('active');
+    setTimeout(function() {
+      $('.message.active').removeClass('active')
+    }, 3000);
+
   }
 });
 
 
-$('iframe').mouseover(function(){
-  cursor.addClass('inactive')
+$('.wrapper-photo>.inner').mouseover(function(){
+  cursor.addClass('active')
 })
 
-$('iframe').mouseout(function(){
-  cursor.removeClass('inactive')
+$('.wrapper-photo>.inner').mouseout(function(){
+  cursor.removeClass('active')
 })
 
 // ============================================
