@@ -300,3 +300,93 @@ const artwork =[
     ]
   },
 ];
+
+
+// ============================================
+//         SUCCESS / MODEL - DATABASE
+// ============================================
+
+
+const allModels = [
+  [
+    'https://my.spline.design/backpack-fc152d6dfc940bd47a51d592725b9f04/', // bag
+    0
+  ],
+  [
+    'https://my.spline.design/christmas-370fd687501d79686a91c7c3b1f73c5a/', // christmas bulb
+    1
+  ],
+  [
+    'https://my.spline.design/bag-1d2248d0847cb671bfff280da9f3a851/', // bag
+    2
+  ],
+  [
+    'https://my.spline.design/towels-d2cdf486d160ffcb8b7f860938ce1187/', // towel
+    3
+  ],
+  [
+    'https://my.spline.design/garbagebin-a1c05760a2e06a6c44123f040e005831/', // garbagebin
+    4
+  ],
+  [
+    'https://my.spline.design/palm-f2073632d3a764e6aa3fa466335fa5a0/', // palm
+    5
+  ],
+  [
+    'https://my.spline.design/clock-8efb856751d08e4c8788d9837ba775fe/', // clock
+    6
+  ],  
+  [
+    'https://my.spline.design/scissors-d84859144a34d8eb12ee8777cc7dd7d6/', // scissors
+    7
+  ],  
+  [
+    'https://my.spline.design/schlaufe-eb5645b85e48235e7cb627be6e7beeac/', // hairband
+    8
+  ],  
+  [
+    'https://my.spline.design/glass-232c44afc8769d40e026660d2754cdf4/', // glass
+    9
+  ],  
+  [
+    'https://my.spline.design/sunglasses-571e48d8ce3089b0ebe7d54f16176541/', // sunglasses
+    10
+  ],
+  [
+    'https://my.spline.design/button-94e3191a4661e33b250159736fee98fc/', // button
+    11
+  ],
+  [
+    'https://my.spline.design/bottle-b90b36c246a768408baae3a384377c03/', // bottle
+    12
+  ],
+  [
+    'https://my.spline.design/palm-f2073632d3a764e6aa3fa466335fa5a0/', // palm
+    13
+  ],
+  [
+    'https://my.spline.design/heating-bc8b58feb1ce5f7d0793795d708c7bf1/', // heating
+    14
+  ],
+]
+
+
+// ============================================
+//        SUCCESS / LOADING THE OBJECTS
+// ============================================
+
+
+function Shuffle(o) {
+	for(var j, x, i = o.length; i; j = parseInt(Math.random() * i), x = o[--i], o[i] = o[j], o[j] = x);
+	return o;
+};
+
+Shuffle(allModels);
+console.log(allModels[0]);
+
+$('.success iframe').each(function(){
+  var i = $(this).parents('div').attr('array-id')
+    $(this).attr('src', allModels[i][0])
+    thisId = allModels[i][1]
+    $(this).parents('div').attr('data-id', thisId)
+});

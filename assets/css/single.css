@@ -34,10 +34,12 @@ main{
   position: relative;
   border-radius: var(--radius);
   overflow: hidden;
+  cursor: grab;
 }
 
 .wrapper-side .info{
   text-align: center;
+  width: 100%;
 }
 
 .wrapper-side .wrapper-hint{
@@ -147,7 +149,7 @@ main{
 .wrapper-photo>.inner>.target{
   position: absolute;
   border-radius: 500px;
-  /* border: var(--border); */
+  border: var(--border);
   display: flex;
   justify-content: center;
   align-items: center;

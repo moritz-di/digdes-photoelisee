@@ -164,7 +164,7 @@ main.about .title-wrapper{
 .res-overlay{
   display: none;
   position: fixed;
-  height: 100vh;
+  height: 100vh;  
   width: 100vw;
   top: 0;
   left: 0;
@@ -173,6 +173,7 @@ main.about .title-wrapper{
   padding: 40px;
   background: var(--color-dark);
   z-index: 88;
+  box-sizing: border-box;
 }
 
 .preloader{
@@ -196,6 +197,11 @@ main.about .title-wrapper{
 .preloader>div,
 .res-overlay>span{
   z-index: 99;
+}
+
+.res-overlay>span{
+  max-width: 80vw;
+  text-align: center;
 }
 
 @media only screen and (max-width: 1200px){
