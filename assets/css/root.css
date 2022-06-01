@@ -1,6 +1,6 @@
 :root{
   --color-dark: black;
-  --color-light: #F3F3F3;
+  --color-light: #FFF;
   --border: 2px solid black;
   --radius: 35px;
 }
@@ -30,4 +30,45 @@ body{
        font-weight: 200 700;
        font-display: swap;
        font-style: normal;
+}
+
+/* cursor */
+#cursor{
+  height: 20px;
+  width: 20px;
+  background: transparent;
+  border: 2px solid var(--color-dark);
+  margin: -1px 0 0 -1px;
+  position: fixed;
+  pointer-events: none;
+  /* mix-blend-mode: difference; */
+  z-index: 50;
+  border-radius: 50%;
+  transition: .5s background;
+  opacity: 1;
+}
+
+#cursor.inactive{
+  opacity: 0;
+}
+
+#cursor.false{
+  background: red;
+  border-color: red;
+  animation: wiggle .2s ease-in-out 5;
+}
+
+@keyframes wiggle {
+  0%{
+    transform: translate(0, 0);
+  }
+  33% {
+    transform: translate(5px, 0);
+  }
+  66% {
+    transform: translate(-5px, 0);
+  }
+  100% {
+    transform: translate(0, 0);
+  }
 }

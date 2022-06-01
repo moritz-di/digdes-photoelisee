@@ -77,17 +77,19 @@ main{
   height: 100%;
   width: 100%;
   position: relative;
+  z-index: 10;
 }
 
 .wrapper-photo>.inner{
   display: flex;
-}
-
-.wrapper-photo.hint{
   position: relative;
 }
 
-.wrapper-photo.hint::after{
+.wrapper-photo.hint>.inner{
+  position: relative;
+}
+
+.wrapper-photo.hint>.inner::after{
   content: "";
   display: flex;
   position: absolute;
@@ -100,7 +102,7 @@ main{
 .wrapper-photo>.inner>.target{
   position: absolute;
   border-radius: 500px;
-  /*border: var(--border);*/
+  border: var(--border);
   display: flex;
   justify-content: center;
   align-items: center;

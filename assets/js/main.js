@@ -78,7 +78,7 @@ var gotoId = page_id
 var gotoModel = page_model
 
 // switch to the next model
-$('.wrapper-photo>.target').click(function(){
+$('.wrapper-photo>.inner>.target').click(function(){
   // set up the model count
   gotoModel++
   // redirect to the success-page if all the objects were found
@@ -195,7 +195,3 @@ elem.addEventListener('wheel', panzoom.zoomWithWheel)
 
 
 //let hasChildren = typeof(targets[0]) === "number" ? false : true; 
-
-// artwork.forEach((artwork, index)=>{
-//   console.log(artwork.image);
-// });

@@ -39,6 +39,17 @@ a{
   cursor: pointer;
 }
 
+/* noise */
+.noise {
+  padding: -35px -40px -40px -40px;
+  position: fixed;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  pointer-events: none;
+}
+
 /* fonts */
 h1{
   font-weight: 450;
@@ -72,46 +83,6 @@ header{
   width: 35vw;
 }
 
-/* cursor */
-#cursor{
-  height: 20px;
-  width: 20px;
-  background: transparent;
-  border: 2px solid var(--color-dark);
-  margin: -1px 0 0 -1px;
-  position: fixed;
-  pointer-events: none;
-  /* mix-blend-mode: difference; */
-  z-index: 5;
-  border-radius: 50%;
-  transition: .5s background;
-  opacity: 1;
-}
-
-#cursor.inactive{
-  opacity: 0;
-}
-
-#cursor.false{
-  background: red;
-  border-color: red;
-  animation: wiggle .2s ease-in-out 5;
-}
-
-@keyframes wiggle {
-  0%{
-    transform: translate(0, 0);
-  }
-  33% {
-    transform: translate(5px, 0);
-  }
-  66% {
-    transform: translate(-5px, 0);
-  }
-  100% {
-    transform: translate(0, 0);
-  }
-}
 
 /* iframe logo overlay */
 
