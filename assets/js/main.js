@@ -25,8 +25,8 @@ $('.home .wrapper-models>div>iframe').each(function(){
 
 
 // home scrolling through the elements
-gsap.set(".home .wrapper-models.first-row", {x: 400}),
-gsap.to(".home .wrapper-models.first-row", {x: -800, scrollTrigger: {
+gsap.set(".home .wrapper-models.first-row", {x: 1200}),
+gsap.to(".home .wrapper-models.first-row", {x: -1200, scrollTrigger: {
       trigger: "body",
       start: "top top",
       end: "+=500",
@@ -35,8 +35,8 @@ gsap.to(".home .wrapper-models.first-row", {x: -800, scrollTrigger: {
       pin: true
 }});
 
-gsap.set(".home .wrapper-models.second-row", {x: -800}),
-gsap.to(".home .wrapper-models.second-row", {x: 600, scrollTrigger: {
+gsap.set(".home .wrapper-models.second-row", {x: -1600}),
+gsap.to(".home .wrapper-models.second-row", {x: 1500, scrollTrigger: {
       trigger: "body",
       start: "top top",
       end: "+=500",

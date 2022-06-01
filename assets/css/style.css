@@ -93,8 +93,8 @@ header{
 .wrapper-models>div::after,
 .wrapper-side>.model::after{
   content: '';
-  height: 15px;
-  width: 15px;
+  height: 85px;
+  width: 85px;
   position: absolute;
   right: 6px;
   bottom: 6px;
@@ -125,6 +125,7 @@ main{
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  position: relative;
 }
 
 .single .wrapper-inner{
@@ -138,20 +139,49 @@ main{
   margin: 5vh 0;
 }
 
+.home .title-wrapper{
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
 .wrapper-models{
   display: flex;
 }
 
+.wrapper-models.first-row{
+  margin-bottom: -5vh;
+}
+
 .wrapper-models>div{
-  height: 200px;
-  width: 200px;
+  height: 600px;
+  width: 600px;
+  margin: 0;
+}
+
+.success .wrapper-models>div{
   margin: 0 5vw;
 }
 
+.success .wrapper-models>div{
+  height: 300px;
+  width: 300px;
+  margin: 0;
+}
+
+.success .wrapper-models>div>iframe{
+  transform: scale(.5);
+}
+
+.success .wrapper-models>div::after{
+  height: 20px;
+  width: 20px;
+}
+
 .wrapper-models>div>iframe{
-  height: 500px;
-  width: 500px;
-  transform: scale(.4);
+  height: 600px;
+  width: 600px;
   transform-origin: left top;
 }
 
